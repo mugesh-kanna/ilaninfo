@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~aos/dist/aos.css";
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.p-card .p-card-content {
+    text-align: justify;
+    padding: 0 !important;
+}
+
+.p-card .p-card-title {
+    text-align: center;
+}
+
+.p-card-header img {
+    border-radius: 6px 6px 0 0;
+}
+
+.mandatory::after {
+    content: " *";
+    color: red;
+}
+
+.p-inline-message.p-component.p-inline-message-error {
+    margin-top: 0.5rem;
+}
+
+.form-control {
+    margin-top: 0.2rem;
+}
+
+.textFont {
+    font-family: "Gellix-Bold", sans-serif;
+}
+
+.p-dialog .p-dialog-header {
+    background: #530565 !important;
+    color: white !important;
+    padding: 1rem !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    color: white !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover {
+    color: black !important;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-dropdown{
+    min-width: 100% !important
+}
+
+.container{
+    margin-right: none !important;
+    margin-left: none !important;
+    max-width: 100% !important;
+}

@@ -1,0 +1,49 @@
+<form [formGroup]="contactForm">
+    <div class="row" *ngIf="type == 2">
+        <div class="col-sm-12 col-md-4 mb-2">
+            <label class="mandatory">Products</label>
+            <p-multiSelect [options]="dropValues" formControlName="product" defaultLabel="Select a Product" appendTo="body"
+            optionLabel="name" selectedItemsLabel="{0} items selected" [style]="{'width':'100%'}"></p-multiSelect>
+            <p-message severity="error" text="Product is required"
+                *ngIf="contactForm.controls.product.errors?.required && (submitted || contactForm.controls.product.dirty || contactForm.controls.product.touched)"></p-message>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-4 mb-2">
+            <label class="mandatory">Name</label>
+            <input type="text" pInputText formControlName="name" placeholder="Enter Your Name"
+            class="form-control">
+            <p-message severity="error" text="Name is required"
+                *ngIf="contactForm.controls.name.errors?.required && (submitted || contactForm.controls.name.dirty || contactForm.controls.name.touched)"></p-message>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2">
+            <label class="mandatory">Mobile Number</label>
+            <input type="text" pInputText pKeyFilter="int" formControlName="mobile" placeholder="Enter Your Mobile Number"
+            class="form-control" maxlength="10">
+            <p-message severity="error" text="Mobile Number is required"
+                *ngIf="contactForm.controls.mobile.errors?.required && (submitted || contactForm.controls.mobile.dirty || contactForm.controls.mobile.touched)"></p-message>
+            <p-message severity="error" text="Enter Valid Mobile Number"
+                *ngIf="contactForm.controls.mobile.errors?.pattern && (submitted || contactForm.controls.mobile.dirty || contactForm.controls.mobile.touched)"></p-message>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2">
+            <label class="mandatory">Email</label>
+            <input type="text" pInputText formControlName="email" placeholder="Enter Your Email"
+            class="form-control">
+            <p-message severity="error" text="Email is required"
+                *ngIf="contactForm.controls.email.errors?.required && (submitted || contactForm.controls.email.dirty || contactForm.controls.email.touched)"></p-message>
+            <p-message severity="error" text="Enter Valid Email"
+                *ngIf="contactForm.controls.email.errors?.pattern && (submitted || contactForm.controls.email.dirty || contactForm.controls.email.touched)"></p-message>
+        </div>
+        <div class="col-sm-12 mb-2">
+            <label class="mandatory">Message</label>
+            <textarea rows="5" pInputTextarea class="form-control" formControlName="message"
+            placeholder="Enter Your Message"></textarea>
+            <p-message severity="error" text="Message is required"
+                *ngIf="contactForm.controls.message.errors?.required && (submitted || contactForm.controls.message.dirty || contactForm.controls.message.touched)"></p-message>
+        </div>
+        <div class="col-12 mt-2 text-center">
+            <p-button label="Submit" styleClass="p-button-sm p-button-success"
+            (click)="submitContactForm()"></p-button>
+        </div>
+    </div>
+</form>

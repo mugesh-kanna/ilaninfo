@@ -1,0 +1,81 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md fixed-top" color-on-scroll="300">
+  <div class="container mx-4">
+    <div class="navbar-translate" (click)="removeFocus()">
+      <div class="cursor-pointer">
+        <img src="../../../assets/icons/ilanInfoLogo(3).png" style="width: 140px" data-aos="fade-right"
+        routerLink="/pages/home">
+      </div>
+    </div>
+    <button class="navbar-toggler buttonBorder" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+    aria-expanded="false" aria-label="Toggle navigation" (click)="removeFocus()">
+    <i class="fa fa-bars footerIcon"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
+        <li class="nav-item" *ngIf="!hasItems(item)" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
+          <a class="nav-link navColor" [routerLink]="item.path" (mouseover)="addFocus(ind)">
+            <i class="me-1 {{ item.icon }}"></i>{{item.label}}</a>
+        </li>
+        <li class="nav-item" *ngIf="hasItems(item)">
+          <a class="nav-link navColor cursor-pointer" (mouseover)="addFocus(ind)">
+            <i class="me-1 {{ item.icon }}"></i>{{item.label}} <i class="fa fa-angle-down"></i></a>
+        </li>
+
+        <div class="submenu click-style{{ind}} container" *ngIf="hasItems(item) && ((item.subMenu).length>1)" (click)="removeFocus()">
+          <div class="row m-2">
+            <div [ngClass]="{'col-sm-12 col-md-6 col-lg-3 col-xl-3' : (item.subMenu.length) > 3,
+              'col-sm-12 col-md-6 col-lg-4 col-xl-4' : (item.subMenu.length) == 3,
+              'col-sm-12 col-md-12 col-lg-6 col-xl-6' : (item.subMenu.length) == 2,
+              'col-12' : (item.subMenu.length) == 1 }" *ngFor="let submenu of item.subMenu" style="margin-top: 0.5rem;">
+              <span class="submenuText pt-1">{{submenu.label}}</span>
+              <ul class="submenu-item">
+                <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
+                  <a class="nav-link text-white" [routerLink]="submenuitems.path">
+                    {{submenuitems.label}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="submenu click-style{{ind}} container miniSubmenu" *ngIf="hasItems(item) && (item.subMenu).length == 1" (click)="removeFocus()">
+          <div class="row m-2">
+            <div [ngClass]="{'col-sm-12 col-md-6 col-lg-3 col-xl-3' : (item.subMenu.length) > 3,
+              'col-sm-12 col-md-6 col-lg-4 col-xl-4' : (item.subMenu.length) == 3,
+              'col-sm-12 col-md-12 col-lg-6 col-xl-6' : (item.subMenu.length) == 2,
+              'col-12' : (item.subMenu.length) == 1 }" *ngFor="let submenu of item.subMenu" style="margin-top: 0.5rem;">
+              <span class="submenuText pt-1">{{submenu.label}}</span>
+              <ul class="submenu-item">
+                <li class="nav-item" *ngFor="let submenuitems of submenu.subMenuItems" (click)="removeFocus()"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
+                  <a class="nav-link text-white" [routerLink]="submenuitems.path">
+                    {{submenuitems.label}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <div class="text-end hideContact">
+      <div data-aos="fade-left" data-aos-duration="1000"><a href="https://twitter.com/ChnTechnologies" target="_blank" class="footerIcon p-2" 
+      pTooltip="Twitter" tooltipPosition="bottom">
+        <i class="fa fa-twitter"></i></a></div>
+      <div data-aos="fade-left" data-aos-duration="1800"><a href="https://www.facebook.com/people/CHN-Technologies/100068692698660/" target="_blank" class="footerIcon p-2"
+      pTooltip="Facebook" tooltipPosition="bottom">
+          <i class="fa fa-facebook"></i></a></div>
+      <div data-aos="fade-left" data-aos-duration="2300"><a href="https://www.instagram.com/chntechnologies/" target="_blank" class="footerIcon p-2"
+      pTooltip="Instagram" tooltipPosition="bottom">
+          <i class="fa fa-instagram"></i></a></div>
+      <div data-aos="fade-left" data-aos-duration="3000"><a href="https://www.linkedin.com/in/chn-technologies-977b7220a/" target="_blank" class="footerIcon p-2"
+      pTooltip="LinkedIn" tooltipPosition="bottom">
+        <i class="fa fa-linkedin"></i></a></div>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->

@@ -1,0 +1,127 @@
+.navbar {
+    /* background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(57 2 112)) */
+    background-color: #fff;
+    color: #530565;
+}
+
+.navColor{
+    color: #530565;
+}
+
+.miniSubmenu{
+    left: calc(65%)
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: #8f4e9d;
+    color: white;
+    /* text-wrap: nowrap; */
+    top: calc(100%);
+    -webkit-box-shadow: 1px 0 20px rgba(0, 0, 0, 0.08);
+    /* border-radius: 5px; */
+    font-size: 15px;
+    /* right: 0;
+    left: 0; */
+    width: fit-content;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenuText {
+    color: #ffbb08;
+    font-weight: bold;
+}
+/* .navbar {
+    border-bottom: 1px solid #BBBBBB;
+  } */
+  
+  .nav-link {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #530565;
+    padding: 10px 0px;
+    margin: 0px 15px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.70;
+  }
+  
+  .nav-link:hover {
+    opacity: 1;
+  }
+  
+  .nav-link::before {
+    transition: 300ms;
+    height: 3px;
+    content: "";
+    position: absolute;
+    background-color: #530565;
+  }
+  
+  .nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
+
+/*li.nav-item:hover {
+    cursor: pointer;
+    background: color #530565;;
+    .navColor{
+        color: white;
+    }
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+    /* Hide on larger screens 
+}
+
+/* .fitContent{
+    display: flex;
+    justify-content: center;
+    min-width: -webkit-fill-available;
+} */
+
+.footerIcon{
+    color: #530565;
+    font-size: 1.5rem;
+}
+
+.hideContact {
+    display: flex;
+}
+
+@media (max-width: 1022px) {
+    .hideContact {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .submenu {
+        overflow-y: overlay;
+        max-height: 50vh;
+        position: relative;
+    }
+
+    .miniSubmenu{
+        left: calc(0%)
+    }
+}
+
+.buttonBorder{
+    border-color: #530565;
+}

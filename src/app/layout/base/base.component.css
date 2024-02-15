@@ -1,0 +1,31 @@
+.page-wrapper{
+    margin-top: 3.5rem;
+    flex: 1;
+}
+
+.main-wrapper{
+    font-family: "Gellix-Bold", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* display: none; */
+    padding: 10px 15px;
+    background-color: #530565;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.p-button.p-button-help:enabled:hover, .p-buttonset.p-button-help > .p-button:enabled:hover, .p-splitbutton.p-button-help > .p-button:enabled:hover {
+    background-color: #530565;
+}
