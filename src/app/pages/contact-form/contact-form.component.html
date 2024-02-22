@@ -1,22 +1,20 @@
 <form [formGroup]="contactForm">
-    <div class="row" *ngIf="type == 2">
-        <div class="col-sm-12 col-md-4 mb-2">
-            <label class="mandatory">Products</label>
-            <p-multiSelect [options]="dropValues" formControlName="product" defaultLabel="Select a Product" appendTo="body"
-            optionLabel="name" selectedItemsLabel="{0} items selected" [style]="{'width':'100%'}"></p-multiSelect>
-            <p-message severity="error" text="Product is required"
-                *ngIf="contactForm.controls.product.errors?.required && (submitted || contactForm.controls.product.dirty || contactForm.controls.product.touched)"></p-message>
-        </div>
-    </div>
     <div class="row">
-        <div class="col-sm-12 col-md-4 mb-2">
-            <label class="mandatory">Name</label>
-            <input type="text" pInputText formControlName="name" placeholder="Enter Your Name"
+        <div class="col-sm-12 col-md-6 mb-2">
+            <label class="mandatory">First Name</label>
+            <input type="text" pInputText formControlName="firstname" placeholder="Enter Your First Name"
             class="form-control">
-            <p-message severity="error" text="Name is required"
-                *ngIf="contactForm.controls.name.errors?.required && (submitted || contactForm.controls.name.dirty || contactForm.controls.name.touched)"></p-message>
+            <p-message severity="error" text="First Name is required"
+                *ngIf="contactForm.controls.firstname.errors?.required && (submitted || contactForm.controls.firstname.dirty || contactForm.controls.firstname.touched)"></p-message>
         </div>
-        <div class="col-sm-12 col-md-4 mb-2">
+        <div class="col-sm-12 col-md-6 mb-2">
+            <label>Last Name</label>
+            <input type="text" pInputText formControlName="lastname" placeholder="Enter Your Last Name"
+            class="form-control">
+            <p-message severity="error" text="Last Name is required"
+                *ngIf="contactForm.controls.lastname.errors?.required && (submitted || contactForm.controls.lastname.dirty || contactForm.controls.lastname.touched)"></p-message>
+        </div>
+        <div class="col-sm-12 col-md-6 mb-2">
             <label class="mandatory">Mobile Number</label>
             <input type="text" pInputText pKeyFilter="int" formControlName="mobile" placeholder="Enter Your Mobile Number"
             class="form-control" maxlength="10">
@@ -25,7 +23,7 @@
             <p-message severity="error" text="Enter Valid Mobile Number"
                 *ngIf="contactForm.controls.mobile.errors?.pattern && (submitted || contactForm.controls.mobile.dirty || contactForm.controls.mobile.touched)"></p-message>
         </div>
-        <div class="col-sm-12 col-md-4 mb-2">
+        <div class="col-sm-12 col-md-6 mb-2">
             <label class="mandatory">Email</label>
             <input type="text" pInputText formControlName="email" placeholder="Enter Your Email"
             class="form-control">
@@ -35,11 +33,11 @@
                 *ngIf="contactForm.controls.email.errors?.pattern && (submitted || contactForm.controls.email.dirty || contactForm.controls.email.touched)"></p-message>
         </div>
         <div class="col-sm-12 mb-2">
-            <label class="mandatory">Message</label>
-            <textarea rows="5" pInputTextarea class="form-control" formControlName="message"
-            placeholder="Enter Your Message"></textarea>
-            <p-message severity="error" text="Message is required"
-                *ngIf="contactForm.controls.message.errors?.required && (submitted || contactForm.controls.message.dirty || contactForm.controls.message.touched)"></p-message>
+            <label class="mandatory">Address</label>
+            <textarea rows="5" pInputTextarea class="form-control" formControlName="address"
+            placeholder="Enter Your Address"></textarea>
+            <p-message severity="error" text="Address is required"
+                *ngIf="contactForm.controls.address.errors?.required && (submitted || contactForm.controls.address.dirty || contactForm.controls.address.touched)"></p-message>
         </div>
         <div class="col-12 mt-2 text-center">
             <p-button label="Submit" styleClass="p-button-sm p-button-success"

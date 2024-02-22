@@ -41,43 +41,43 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'DataScience+AI',
-                path: ''
+                path: '/pages/datascience'
               },
               {
                 label: '.NET Fullstack',
-                path: ''
+                path: '/pages/dotnetfullstack'
               },
               {
                 label: 'PYTHON Fullstack',
-                path: ''
+                path: '/pages/pythonfullstack'
               },
               {
                 label: 'JAVA Fullstack',
-                path: ''
+                path: '/pages/javafullstack'
               },
               {
                 label: 'MEAN Stack',
-                path: ''
+                path: '/pages/meanstack'
               },
               {
                 label: 'MERN Stack',
-                path: ''
+                path: '/pages/mernstack'
               },
               {
                 label: 'Cyber Security',
-                path: ''
+                path: '/pages/cybersecurity'
               },
               {
                 label: 'Ms-Azure+DEVOPS',
-                path: ''
+                path: '/pages/azuredevops'
               },
               {
                 label: 'UI Fullstack',
-                path: ''
+                path: '/pages/uifullstack'
               },
               {
                 label: 'SalesForce',
-                path: ''
+                path: '/pages/salesforce'
               },
             ]
           },
@@ -86,35 +86,35 @@ export class NavbarComponent implements OnInit {
             subMenuItems : [
               {
                 label: 'UX Designer',
-                path: ''
+                path: '/pages/uxdesign'
               },
               {
                 label: 'DIGITAL Marketing',
-                path: ''
+                path: '/pages/digitalmarketing'
               },
               {
                 label: 'TESTING',
-                path: ''
+                path: '/pages/testing'
               },
               {
                 label: 'WordPress',
-                path: ''
+                path: '/pages/wordpress'
               },
               {
                 label: 'Advance Excel',
-                path: ''
+                path: '/pages/advanceexcel'
               },
               {
                 label: 'English IT Communication',
-                path: ''
+                path: '/pages/english'
               },
               {
                 label: 'MS-Office',
-                path: ''
+                path: '/pages/msoffice'
               },
               {
                 label: 'Tally',
-                path: ''
+                path: '/pages/tally'
               },
             ]
           }
