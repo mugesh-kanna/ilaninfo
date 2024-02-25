@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./wordpress.component.css']
 })
 export class WordpressComponent {
-
+  contactModal: boolean = false;
 }

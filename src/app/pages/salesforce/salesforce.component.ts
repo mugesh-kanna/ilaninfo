@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./salesforce.component.css']
 })
 export class SalesforceComponent {
-
+  contactModal: boolean = false;
 }

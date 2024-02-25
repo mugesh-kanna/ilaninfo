@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pythonfullstack.component.css']
 })
 export class PythonfullstackComponent {
-
+  contactModal: boolean = false;
 }

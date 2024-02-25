@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cybersecurity.component.css']
 })
 export class CybersecurityComponent {
-
+  contactModal: boolean = false;
 }

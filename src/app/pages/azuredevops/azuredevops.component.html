@@ -1,1 +1,66 @@
-<p>azuredevops works!</p>
+<div id="aboutus"></div>
+
+<div class="row p-4">
+    <div class="col-sm-12 col-md-6 mb-2 d-flex justify-content-center align-items-center">
+        <div class="pt-4 text-center" data-aos="flip-right">
+            <h2 class="headColor"><b>MS-Azure</b></h2>
+            <h5>Build Your MS-Azure Career with Our 100% Job Assurance Courses</h5>
+            <h6><i class="pi pi-check-circle text-success"></i> For fresh graduates/Early career professionals</h6>
+            <p-button label="Apply Now" styleClass="p-button-help" (click)="contactModal = true"></p-button>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 mb-4 image">
+        <img src="../../../assets/images/azure.png" class="w-100 p-5" data-aos="fade-left">
+    </div>
+</div>
+
+<div class="container mb-4">
+    <p-card>
+        <div class="row" style="text-align: justify;" data-aos="fade-up">
+           <div class="col-12 mb-4">
+                <h5>About Course</h5>
+                <p>Microsoft Azure is a cloud computing service. Azure certifications are for information technology (IT) professionals, 
+                    developers, and data and artificial intelligence (AI) professionals who work within the Microsoft cloud computing system.</p>
+                <h6>What you'll learn</h6>
+                <ul>
+                    <li>What is the cloud and what it's good for</li>
+                    <li>Fundamentals of Microsoft Azure - Resource Groups, Storage Account, Budgets and more</li>
+                    <li>Working with Azure Compute - Virtual Machines, App Services, AKS, Functions and more</li>
+                    <li>Data in Azure - Azure SQL, MySQL, CosmosDB, Storage and more</li>
+                    <li>Managing authentication using Azure AD</li>
+                    <li>Designing disaster recovery strategy</li>
+                    <li>Architecting applications for Azure</li>
+                    <li>Basic terminology of the cloud: Regions, Zones, etc.</li>
+                    <li>Working with the Azure portal</li>
+                    <li>Design and implementation of networking in Azure - VNets, Subnets, NSG, App Gateway and more</li>
+                    <li>Messaging in Azure using Queues, Event Grid, Service Bus and Event Hubs</li>
+                    <li>How to secure your apps in Azure</li>
+                    <li>Manage costs in Azure</li>
+                    <li>How to migrate existing applications to Azure</li>
+                </ul>
+           </div>
+           <div class="col-12 mb-4">
+            <h5>Outcomes</h5>
+            <ul>
+                <li>
+                    Master a subject or tool with hands-on projects.
+                </li>
+                <li>
+                    Develop a deep understanding of key concepts.
+                </li>
+                <li>
+                    Learn in-demand skills from industry experts.
+                </li>
+            </ul>
+       </div>
+        </div>
+    </p-card>
+</div>
+
+
+<p-dialog header="Contact Us" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

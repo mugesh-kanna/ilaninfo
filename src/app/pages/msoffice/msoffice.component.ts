@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./msoffice.component.css']
 })
 export class MsofficeComponent {
-
+  contactModal: boolean = false;
 }

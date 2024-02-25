@@ -11,3 +11,21 @@
     z-index: -1;
     opacity: 0.4;
 }
+
+.image {
+    display: inline-block;
+    overflow: hidden;
+    /* clip the excess when child gets bigger than parent */
+}
+
+.image img {
+    display: block;
+    transition: transform .4s;
+    /* smoother zoom */
+}
+
+.image:hover img {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    cursor: pointer;
+}

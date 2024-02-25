@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./javafullstack.component.css']
 })
 export class JavafullstackComponent {
-
+  contactModal: boolean = false;
 }

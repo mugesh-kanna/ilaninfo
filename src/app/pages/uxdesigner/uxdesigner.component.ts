@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./uxdesigner.component.css']
 })
 export class UxdesignerComponent {
-
+  contactModal: boolean = false;
 }

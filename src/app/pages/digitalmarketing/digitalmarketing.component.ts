@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./digitalmarketing.component.css']
 })
 export class DigitalmarketingComponent {
-
+  contactModal: boolean = false;
 }

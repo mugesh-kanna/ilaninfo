@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./advanceexcel.component.css']
 })
 export class AdvanceexcelComponent {
-
+  contactModal: boolean = false;
 }

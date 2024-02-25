@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./mernstack.component.css']
 })
 export class MernstackComponent {
-
+  contactModal: boolean = false;
 }

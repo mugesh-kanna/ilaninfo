@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tally.component.css']
 })
 export class TallyComponent {
-
+  contactModal: boolean = false;
 }

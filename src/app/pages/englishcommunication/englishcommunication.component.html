@@ -1,1 +1,65 @@
-<p>englishcommunication works!</p>
+<div id="aboutus"></div>
+
+<div class="row p-4">
+    <div class="col-sm-12 col-md-6 mb-2 d-flex justify-content-center align-items-center">
+        <div class="pt-4 text-center" data-aos="flip-right">
+            <h2 class="headColor"><b>English IT Communication</b></h2>
+            <h5>Build Your English IT Communication with Our 100% Job Assurance Courses</h5>
+            <h6><i class="pi pi-check-circle text-success"></i> For fresh graduates/Early career professionals</h6>
+            <p-button label="Apply Now" styleClass="p-button-help" (click)="contactModal = true"></p-button>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 mb-4 image">
+        <img src="../../../assets/images/communication-english.png" class="w-100 p-4" data-aos="fade-left">
+    </div>
+</div>
+
+<div class="container mb-4">
+    <p-card>
+        <div class="row" style="text-align: justify;" data-aos="fade-up">
+           <div class="col-12 mb-4">
+                <h5>About Course</h5>
+                <p>Improve your English, boost your tech career, and move toward a higher-paying job by leveling up your communication 
+                    skills in English Communication for Tech Professionals brought to you by Arizona State University and English4IT.<br>
+                    This course is for all business roles, both technical and non-technical, from developers to CEOs.
+                </p>
+                <h6>What you'll learn</h6>
+                <ul>
+                    <li>Improve your English vocabulary and grammar for communication in the tech industry</li>
+                    <li>Gain soft skills for working as a tech professional</li>
+                </ul>
+           </div>
+           <div class="col-12 mb-4">
+            <h5>Outcomes</h5>
+            <ul>
+                <li>
+                    Improve your English for professional communication;
+                </li>
+                <li>
+                    Build your vocabulary with at least 30 new useful words and phrases from each module;
+                </li>
+                <li>
+                    Master key grammar topics;
+                </li>
+                <li>
+                    Have templates for emails and meetings which you can start using in your work right away;
+                </li>
+                <li>
+                    Create a professional and attention-grabbing resume (or CV) in English and upgrade your LinkedIn profile;
+                </li>
+                <li>
+                    Prepare for a job interview by learning useful strategies and skills that will help you preform better in interviews.
+                </li>
+            </ul>
+       </div>
+        </div>
+    </p-card>
+</div>
+
+
+<p-dialog header="Contact Us" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
+    [resizable]="false" appendTo="body">
+    <div class="pt-3">
+        <app-contact-form *ngIf="contactModal"></app-contact-form>
+    </div>
+</p-dialog>

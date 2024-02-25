@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./testing.component.css']
 })
 export class TestingComponent {
-
+  contactModal: boolean = false;
 }

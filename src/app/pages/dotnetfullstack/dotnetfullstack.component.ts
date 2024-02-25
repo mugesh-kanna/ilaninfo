@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dotnetfullstack.component.css']
 })
 export class DotnetfullstackComponent {
+  contactModal: boolean = false;
 
 }

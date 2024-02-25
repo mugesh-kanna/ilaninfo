@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./azuredevops.component.css']
 })
 export class AzuredevopsComponent {
-
+  contactModal: boolean = false;
 }
