@@ -68,3 +68,14 @@
 .headColor {
     color: #530565;
 }
+
+.stretch-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch
+}
+
+.stretch-card> p-card {
+    width: 100%;
+    min-width: 100%
+}

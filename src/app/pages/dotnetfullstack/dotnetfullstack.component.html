@@ -50,6 +50,41 @@
     </p-card>
 </div>
 
+<div class="container mb-4">
+    <h3 class="headColor text-center pb-2"><b>More Courses</b></h3>
+    <div class="row">
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="1000">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/cybersecurity')">
+                <h5 class="text-center">Cyber Security</h5>
+                <p>Organizations must continuously protect themselves and the people they serve from cyber-related threats, 
+                    like fraud and phishing. They rely on cybersecurity to maintain the confidentiality, integrity, and availability of their internal systems and 
+                    information 
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="1500">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/meanstack')">
+                <h5 class="text-center">MEAN Stack</h5>
+                <p>Organizations must continuously protect themselves and the people they serve from cyber-related threats, like fraud and phishing. 
+                    They rely on cybersecurity to maintain the confidentiality, integrity, and availability of their internal systems and 
+                    information  
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="2000">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/mernstack')">
+                <h5 class="text-center">MERN Stack</h5>
+                <p>The MERN stack is a collection of technologies that can be used to build full-stack applications using JavaScript. 
+                    MERN stands for MongoDB, Express, React, and Node.js  
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+    </div>
+</div>
+
 
 <p-dialog header="Contact Us" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
     [resizable]="false" appendTo="body">

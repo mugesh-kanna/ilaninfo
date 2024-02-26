@@ -55,6 +55,44 @@
     </p-card>
 </div>
 
+<div class="container mb-4">
+    <h3 class="headColor text-center pb-2"><b>More Courses</b></h3>
+    <div class="row">
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="1000">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/dotnetfullstack')">
+                <h5 class="text-center">.NET Full Stack</h5>
+                <p>.NET Full Stack Development is about using .NET technologies to build both the frontend and backend of a 
+                    web application. This includes client-side (frontend) programming, server-side (backend) programming, 
+                    and database management 
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="1500">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/datascience')">
+                <h5 class="text-center">Data Science and Artificial Intelligence</h5>
+                <p>Data Science encompasses an interdisciplinary domain focused on extracting valuable insights and knowledge 
+                    from data through the application of statistical and analytical techniques. On the other hand, Artificial 
+                    Intelligence revolves around 
+                    simulating 
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+        <div class="col-sm-12 col-md-4 mb-2" data-aos="flip-left" data-aos-duration="2000">
+            <p-card class="cursor-pointer" styleClass="h-100" (click)="navigate('/pages/salesforce')">
+                <h5 class="text-center">Salesforce</h5>
+                <p>Salesforce Certification is the perfect benchmark that identifies the expertise, and skills of cloud specialists. 
+                    It assists you to start your salesforce career. Salesforce certification will improve your marketability in the 
+                    stiff IT job market by 
+                    enabling you 
+                    <span class="text-primary">Know More...</span>
+                </p>
+            </p-card>
+        </div>
+    </div>
+</div>
+
 
 <p-dialog header="Contact Us" [(visible)]="contactModal" [modal]="true" [style]="{width: '70vw'}" [draggable]="false"
     [resizable]="false" appendTo="body">
