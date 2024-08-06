@@ -1,0 +1,43 @@
+<div id="sideImg"></div>
+<div class="row" style="height: 100vh;width: 100vw;">
+    <div class="col-sm-12 col-md-4">
+
+    </div>
+    <div class="col-sm-12 col-md-4 justifyCenter">
+        <form name="loginForm" [formGroup]="loginForm" class="card p-4">
+            <h5 class="text-center text-primary">LOGIN</h5>
+            <div class="mb-2 mt-2 text-start">
+                <label class="mandatory">User Name</label>
+                <input type="text" class="form-control" formControlName="userName" placeholder="UserName" autocomplete="off"
+                    avoidscripttags>
+                <span class="form-text text-danger" style="font-size: 13px;"
+                    *ngIf="!loginForm.get('userName').valid && (loginForm.get('userName').dirty || loginForm.get('userName').touched)">
+                    Username is required
+                </span>
+            </div>
+            <div class="text-start">
+                <label for="exampleInputPassword1" class="mandatory">Password</label><br>
+                <span class="p-input-icon-right w-100">
+                    <input [type]="IsShow ? 'password' : 'text'" class="form-control" formControlName="password"
+                        id="exampleInputPassword1" autocomplete="current-password" placeholder="Password" autocomplete="off"
+                        avoidscripttags>
+                    <i *ngIf="IsShow" (click)="this.IsShow = !this.IsShow;" class="pi pi-eye"></i>
+                    <i *ngIf="!IsShow" (click)="this.IsShow = !this.IsShow;" class="pi pi-eye-slash"></i>
+                </span>
+                <span class="form-text text-danger" style="font-size: 13px;"
+                    *ngIf="!loginForm.get('password').valid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                    Password is required
+                </span>
+            </div>
+            <div class="text-center mt-4 testalign">
+                <button type="submit" class="btn btn-success me-2 mb-2 mb-md-0" (click)="login()">Login</button>
+                <!-- <button type="submit" class="btn btn-warning me-2 mb-2 mb-md-0">Forgot
+                    Password</button> -->
+                <!-- <a class="mr-1 forget mt-8" (click)="onForget()">Forgotten Password</a> -->
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-12 col-md-4">
+
+    </div>
+</div>

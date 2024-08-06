@@ -12,11 +12,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PagesService } from './services/pages.service';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ToastrModule.forRoot(),
     PdfViewerModule
   ],
-  providers: [PagesService, AlertService],
+  providers: [PagesService, AlertService, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
