@@ -13,11 +13,14 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PagesService } from './services/pages.service';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,

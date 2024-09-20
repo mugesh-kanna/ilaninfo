@@ -1,17 +1,17 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-md fixed-top" color-on-scroll="300">
   <div class="container mx-4">
-    <div class="navbar-translate" (click)="removeFocus()">
+    <!-- <div class="navbar-translate" (click)="removeFocus()">
       <div class="cursor-pointer">
         <img src="../../../assets/icons/ilanInfoLogo(3).png" style="width: 140px" data-aos="fade-right"
         routerLink="/pages/home">
       </div>
-    </div>
+    </div> -->
     <button class="navbar-toggler buttonBorder" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
     aria-expanded="false" aria-label="Toggle navigation" (click)="removeFocus()">
     <i class="fa fa-bars footerIcon"></i>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav" style="font-size: 13px;" *ngFor="let item of menu; let ind=index">
         <li class="nav-item" *ngIf="!hasItems(item)" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
         aria-expanded="false" aria-label="Toggle navigation">

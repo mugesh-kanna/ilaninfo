@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BaseComponent } from './layout/base/base.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
+  { path: 'auth', loadChildren: () => import('../app/auth/auth.module').then(m => m.AuthModule) },
   {
     path: '',
     component: BaseComponent,
@@ -12,7 +14,7 @@ const routes: Routes = [
         loadChildren: ()=> import('./pages/pages.module').then(m => m.PagesModule)
       },
 
-      { path: '', redirectTo: '/pages/home', pathMatch: 'full' }
+      { path: '', redirectTo: '/auth/login', pathMatch: 'full' }
     ]
   }
 ];
