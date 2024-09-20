@@ -12,6 +12,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { PagesService } from './services/pages.service';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ToastrModule.forRoot(),
     PdfViewerModule
   ],
-  providers: [PagesService, AlertService],
+  providers: [PagesService, AlertService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
